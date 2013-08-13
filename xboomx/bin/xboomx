@@ -1,0 +1,7 @@
+#!/usr/bin/python
+
+import os
+
+DMENU_LAUNCHER = 'dmenu'
+
+os.system("bash -c 'dmenu_path | xboomx_sort.py | " + DMENU_LAUNCHER +  "| xboomx_update.py'")
