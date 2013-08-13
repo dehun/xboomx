@@ -1,11 +1,10 @@
-import shelve
 import fileinput
-import os
+import xboomx.db
 
 
 def main():
     # open db
-    db = shelve.open(os.getenv("HOME") + '/.xboomx/xboomx.db')
+    db = xboomx.db.open_shelve()
 
     # get item to update
     item = fileinput.input().next()
@@ -13,6 +12,9 @@ def main():
 
     # update item
     db[item] = db.get(item, 0) + 1
+
+    # print it
+    print item
 
     # clean up
     db.sync()
