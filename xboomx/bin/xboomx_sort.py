@@ -1,11 +1,10 @@
-import shelve
 import fileinput
-import os
+import xboomx.db
 
 
 def main():
-    # open db
-    db = shelve.open(os.getenv("HOME") + '/.xboomx/xboomx.db')
+    # open shelve
+    db = xboomx.db.open_shelve()
 
     # read lines and set weight according to db
     items = []
