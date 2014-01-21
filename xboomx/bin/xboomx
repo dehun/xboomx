@@ -6,4 +6,4 @@ from xboomx.config import config
 
 DMENU_LAUNCHER = 'dmenu ' + config.get("dmenu_params", "")
 
-os.system("bash -c 'dmenu_path | xboomx_sort.py | " + DMENU_LAUNCHER +  "| xboomx_update.py | xargs -I {} bash -c \'{}\''")
+os.system("bash -c 'xboomx_path.py | xboomx_sort.py | " + DMENU_LAUNCHER +  "| xboomx_update.py | xargs -I {} bash -c \'{}\''")
