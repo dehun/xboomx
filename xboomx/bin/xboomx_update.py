@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import fileinput
 import xboomx.db
 
