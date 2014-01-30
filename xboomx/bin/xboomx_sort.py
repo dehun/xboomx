@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import fileinput
 import xboomx.db
 
@@ -13,9 +14,8 @@ def main():
         input_item = input_item.strip('\n')
         items.append((db.get(input_item, 0), input_item))
 
-
     # sort items
-    items.sort(key= lambda x: x[0], reverse=True)
+    items.sort(key=lambda x: x[0], reverse=True)
 
     # print items
     for item in items:
@@ -23,8 +23,6 @@ def main():
 
     # clean up
     db.close()
-
-
 
 
 main()
