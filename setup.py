@@ -15,5 +15,6 @@ setup(
     include_package_data=True,
     package_data={'shared': ["etc/config"]},
     author="Yuriy Netesov",
-    email="retnuhed@gmail.com",
+    author_email="retnuhed@gmail.com",
+    url="https://bitbucket.org/dehun/xboomx/",
 )
