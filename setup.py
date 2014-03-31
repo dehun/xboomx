@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='xboomx',
-    version='0.3',
+    version='0.41',
     packages=['xboomx'],
     scripts=['xboomx/bin/xboomx_path.py',
              'xboomx/bin/xboomx_sort.py',
