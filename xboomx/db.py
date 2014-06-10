@@ -2,7 +2,7 @@ import shelve
 import os
 
 
-def open_shelve():
+def open_shelve(db_type=''):
     # create dir if not exists
     try:
         os.makedirs(os.getenv("HOME") + '/.xboomx')
@@ -10,4 +10,4 @@ def open_shelve():
         pass
 
     # open shelve
-    return shelve.open(os.getenv("HOME") + '/.xboomx/xboomx.db')
+    return shelve.open(os.getenv("HOME") + '/.xboomx/xboomx%s.db' % db_type)
